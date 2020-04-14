@@ -17,6 +17,7 @@ import { LandingDoctorComponent } from './landing/landing-doctor/landing-doctor.
 import { LandingPatientComponent } from './landing/landing-patient/landing-patient.component';
 import { AppointmentsComponent } from './landing/landing-doctor/appointments/appointments.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { DoctorInboxComponent } from './landing/landing-doctor/doctor-inbox/doctor-inbox.component';
 
 @NgModule({
     imports: [
@@ -34,7 +35,8 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
         LandingDoctorComponent,
         LandingPatientComponent,
         AppointmentsComponent,
-        NavbarComponent
+        NavbarComponent,
+        DoctorInboxComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
