@@ -17,6 +17,7 @@ import { LandingDoctorComponent } from './landing/landing-doctor/landing-doctor.
 import { LandingPatientComponent } from './landing/landing-patient/landing-patient.component';
 import { AppointmentsComponent } from './landing/landing-doctor/appointments/appointments.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { AdminComponent } from './_components/admin/admin.component';
 import { DoctorInboxComponent } from './landing/landing-doctor/doctor-inbox/doctor-inbox.component';
 import { TicketsOverviewComponent } from './landing/landing-patient/tickets-overview/tickets-overview.component';
 
@@ -38,7 +39,9 @@ import { TicketsOverviewComponent } from './landing/landing-patient/tickets-over
         AppointmentsComponent,
         NavbarComponent,
         DoctorInboxComponent,
-        TicketsOverviewComponent
+        TicketsOverviewComponent,
+        AdminComponent,
+        DoctorInboxComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
