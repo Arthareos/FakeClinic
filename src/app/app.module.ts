@@ -13,6 +13,10 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AlertComponent } from './_components';
+import { LandingDoctorComponent } from './landing/landing-doctor/landing-doctor.component';
+import { LandingPatientComponent } from './landing/landing-patient/landing-patient.component';
+import { AppointmentsComponent } from './landing/landing-doctor/appointments/appointments.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
     imports: [
@@ -26,7 +30,11 @@ import { AlertComponent } from './_components';
         HomeComponent,
         LoginComponent,
         RegisterComponent,
-        AlertComponent
+        AlertComponent,
+        LandingDoctorComponent,
+        LandingPatientComponent,
+        AppointmentsComponent,
+        NavbarComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -1,32 +1,31 @@
-<h2 style="text-align:center">Sign in to FakeClinic</h2>
-
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <div class="card bg-dark text-white" style="width:33rem; margin: 0 auto">
-        <img class="card-img-top" src="https://media.istockphoto.com/photos/healthcare-photos-picture-id954802966?k=6&m=954802966&s=612x612&w=0&h=wQ35IRVMHGPLLbvpRVO1ADS_ce6VwbGaGzPkEP-69oM=" alt="Card image cap">
-        <div class="card-body">
-
-
-    <div class="form-group">
-        <label for="username">Username or email address</label>
-        <input type="text" formControlName="username" class="form-control bg-dark text-white" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
-        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-            <div *ngIf="f.username.errors.required">Username or email address is required</div>
+<div class="card mx-auto mt-5 w-25" style="background: transparent;">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="card bg-dark text-white">
+            <img class="card-img-top" src="https://media.istockphoto.com/photos/healthcare-photos-picture-id954802966?k=6&m=954802966&s=612x612&w=0&h=wQ35IRVMHGPLLbvpRVO1ADS_ce6VwbGaGzPkEP-69oM=" alt="Card image cap">
+            <h5 class="card-header bg-dark text-white font-weight-bold text-center">Sign in to FakeClinic</h5>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="username">Username or email address</label>
+                    <input type="text" formControlName="username" class="form-control bg-dark text-white" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required">Username or email address is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" formControlName="password" class="form-control bg-dark text-white" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button [disabled]="loading" class="btn btn-primary">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                        Login
+                    </button>
+                    <a routerLink="/register" class="btn btn-link">Register</a>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" formControlName="password" class="form-control bg-dark text-white" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-            <div *ngIf="f.password.errors.required">Password is required</div>
-        </div>
-    </div>
-    <div class="form-group">
-        <button [disabled]="loading" class="btn btn-primary">
-            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-            Login
-        </button>
-        <a routerLink="/register" class="btn btn-link">Register</a>
-    </div>
+    </form>
 </div>
-</div>
-</form>
