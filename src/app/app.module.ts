@@ -16,7 +16,7 @@ import { RegisterComponent } from './auth/register/register.component';
     NavbarComponent,
     LandingPatientComponent,
     LandingDoctorComponent,
-    AppointmentsComponent
+    AppointmentsComponent,
     LoginComponent,
     RegisterComponent
   ],
