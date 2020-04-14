@@ -45,7 +45,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 username: user.username,
                 firstName: user.firstName,
                 lastName: user.lastName,
-                token: 'fake-jwt-token'
+                token: 'fake-jwt-token',
+                admin: false
             })
         }
 
@@ -65,6 +66,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
         function getUsers() {
             if (!isLoggedIn()) return unauthorized();
+            console.log(users);
             return ok(users);
         }
 
