@@ -7,6 +7,8 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { LandingPatientComponent } from './landing/landing-patient/landing-patient.component';
 import { LandingDoctorComponent } from './landing/landing-doctor/landing-doctor.component';
 import { AppointmentsComponent } from './landing/landing-doctor/appointments/appointments.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { AppointmentsComponent } from './landing/landing-doctor/appointments/app
     LandingPatientComponent,
     LandingDoctorComponent,
     AppointmentsComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
