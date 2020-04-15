@@ -34,6 +34,12 @@
             <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
         </div>
     </div>
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="admin" value = true [ngClass]="{ 'is-invalid': submitted && f.admin.errors }">
+        <label class="form-check-label" for="exampleCheck1">Are you a doctor?</label>
+    </div>
+
     <div class="form-group">
         <button [disabled]="loading" class="btn btn-primary">
             <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>

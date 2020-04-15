@@ -14,7 +14,7 @@
         <li class="nav-item" *ngIf=!currentUser>
           <a class="nav-link" href="#">Register</a>
         </li>
-        <li class="nav-item" *ngIf=!currentUser.admin>
+        <li class="nav-item" *ngIf=currentUser.admin>
           <a class="nav-link" href="#" routerLink="/admin">Doctor panel</a>
         </li>
         <li class="nav-item">

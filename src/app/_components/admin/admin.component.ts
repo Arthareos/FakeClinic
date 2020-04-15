@@ -20,6 +20,8 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
       this.loadAllUsers();
+      console.log("Current user");
+      console.log(this.currentUser);
   }
 
   deleteUser(id: number) {

@@ -1,4 +1,4 @@
-<div *ngIf=!currentUser.admin>
+<div *ngIf=currentUser.admin>
     <div class="card bg-dark text-white mx-auto mt-5 w-55" style="width: 30rem;">
         <h5 class="card-header">Hi {{currentUser.firstName}}! You're logged in as a doctor!</h5>
         <div class="card-body">
