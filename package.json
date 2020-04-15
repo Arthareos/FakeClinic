@@ -1,6 +1,6 @@
 {
-  "name": "angular7tutorial",
-  "version": "0.0.0",
+  "name": "FakeClinic",
+  "version": "0.1.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
