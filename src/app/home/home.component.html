@@ -1,1 +1,7 @@
+<div *ngIf=currentUser.admin>
+    <app-landing-doctor></app-landing-doctor>
+</div>
 
+<div *ngIf=!currentUser.admin>
+    <app-landing-patient></app-landing-patient>
+</div>
