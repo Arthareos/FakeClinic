@@ -7,6 +7,7 @@ import { first } from 'rxjs/operators';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.less']
 })
+
 export class AdminComponent implements OnInit {
   currentUser: any;
   users = [];

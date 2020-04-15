@@ -1,12 +1,21 @@
 <div *ngIf=currentUser.admin>
-    <div class="card bg-dark text-white mx-auto mt-5 w-55" style="width: 30rem;">
+    <div class="card bg-dark text-white mx-auto mt-5 w-50" style="width: 30rem;">
         <h5 class="card-header">Hi {{currentUser.firstName}}! You're logged in as a doctor!</h5>
         <div class="card-body">
         <h5>All registered users:</h5>
-        <ul>
-            <li *ngFor="let user of users">
-                {{user.username}} ({{user.firstName}} {{user.lastName}})
-                <a (click)="deleteUser(user.id)" class="badge badge-danger float-right font-weight-normal">Delete</a>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-dark" *ngFor="let user of users">
+                <div *ngIf=user.admin>
+                    {{user.firstName}} {{user.lastName}}
+                    <a (click)="deleteUser(user.id)" class="badge badge-danger float-right font-weight-normal">Delete</a>
+                    <span class="badge badge-info mr-2 float-right font-weight-normal">Doctor</span>
+                </div>
+                <div *ngIf=!user.admin>
+                    {{user.firstName}} {{user.lastName}}
+                    <a (click)="deleteUser(user.id)" class="badge badge-danger float-right font-weight-normal">Delete</a>
+                    <span class="badge badge-info mr-2 float-right font-weight-normal">Patient</span>
+                </div>
+                <!-- {{user.username}} ({{user.firstName}} {{user.lastName}}) -->
             </li>
         </ul>
         </div>
