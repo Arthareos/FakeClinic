@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular7tutorial": {
+    "FakeClinic": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "outputPath": "dist/angular7tutorial",
+            "outputPath": "dist/FakeClinic",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular7tutorial:build"
+            "browserTarget": "FakeClinic:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular7tutorial:build:production"
+              "browserTarget": "FakeClinic:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular7tutorial:build"
+            "browserTarget": "FakeClinic:build"
           }
         },
         "test": {
@@ -112,7 +112,7 @@
         }
       }
     },
-    "angular7tutorial-e2e": {
+    "FakeClinic-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -121,11 +121,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular7tutorial:serve"
+            "devServerTarget": "FakeClinic:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular7tutorial:serve:production"
+              "devServerTarget": "FakeClinic:serve:production"
             }
           }
         },
@@ -141,5 +141,5 @@
       }
     }
   },
-  "defaultProject": "angular7tutorial"
+  "defaultProject": "FakeClinic"
 }

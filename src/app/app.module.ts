@@ -20,6 +20,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AdminComponent } from './_components/admin/admin.component';
 import { DoctorInboxComponent } from './landing/landing-doctor/doctor-inbox/doctor-inbox.component';
 import { TicketsOverviewComponent } from './landing/landing-patient/tickets-overview/tickets-overview.component';
+import { TicketsArchiveComponent } from './landing/landing-patient/tickets-archive/tickets-archive.component';
 
 @NgModule({
     imports: [
@@ -41,7 +42,8 @@ import { TicketsOverviewComponent } from './landing/landing-patient/tickets-over
         DoctorInboxComponent,
         TicketsOverviewComponent,
         AdminComponent,
-        DoctorInboxComponent
+        DoctorInboxComponent,
+        TicketsArchiveComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
