@@ -2,7 +2,11 @@
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="card bg-dark text-white">
             <img class="card-img-top" src="https://media.istockphoto.com/photos/healthcare-photos-picture-id954802966?k=6&m=954802966&s=612x612&w=0&h=wQ35IRVMHGPLLbvpRVO1ADS_ce6VwbGaGzPkEP-69oM=" alt="Card image cap">
-            <h5 class="card-header bg-dark text-white font-weight-bold text-center">Sign in to FakeClinic</h5>
+            <h5 class="card-header bg-dark text-white font-weight-bold text-center">
+                Sign in to
+                <h5 class="badge badge-dark font-weight-bold">Fake</h5>
+                <h5 class="badge badge-warning font-weight-bold">Clinic</h5>
+            </h5>
             <div class="card-body">
                 <div class="form-group">
                     <label for="username">Username or email address</label>
