@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './tickets-overview.component.html',
   styleUrls: ['./tickets-overview.component.less']
 })
+
 export class TicketsOverviewComponent implements OnInit {
 
   constructor() { }
@@ -12,4 +13,12 @@ export class TicketsOverviewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showCreator() {
+    var x = document.getElementById("ticketCreator");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 }
