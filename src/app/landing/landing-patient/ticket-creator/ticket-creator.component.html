@@ -2,4 +2,22 @@
     <h5 class="card-header font-weight-bold">
         Create a new Ticket!
     </h5>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-dark">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </li>
+        <li class="list-group-item bg-dark">
+            <div class="input-group">
+                <textarea class="form-control" placeholder="Content"></textarea>
+            </div>
+        </li>
+        <div class="list-group-item bg-dark">
+            <div class="float-right">
+                <button class="btn btn-danger mr-2" (click)="showCreator()">Cancel</button>
+                <button class="btn btn-success">Send</button>
+            </div>
+        </div>
+    </ul>
 </div>
